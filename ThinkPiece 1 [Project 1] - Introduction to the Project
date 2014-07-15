@@ -1,0 +1,19 @@
+This will be my first programming miniproject.  I will piece together all the various aspects of coding I have learned thus far to create a simple web app.  
+
+My project will center around albums that I do not currently own, but which mean a lot to me.
+
+The "meat" of the app will contain a picture of each album, along with some basic information (artist, title, genre, memories -- some sample lyrics as well would be dope).  The displayed information will change according to which particular album the user selects.  
+
+I would like to include the following elements:
+- HTML
+- CSS
+- JavaScript
+- jQuery (linked from CDN)
+- JSON data or XML data
+- AJAX
+- Membership
+- Search capability
+- Use of Version Control System (Git) throughout
+- Post to GitHub
+
+By pulling together these elements, I hope to increase my understanding of the concepts I have encountered thus far.  
