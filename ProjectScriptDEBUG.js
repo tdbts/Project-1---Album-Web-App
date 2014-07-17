@@ -122,9 +122,24 @@ var albumsNeeded = [
     }
   ];
 
-
 window.addEventListener('load', function() {
 	
-	console.log("The window has loaded!");
+	var results = document.getElementById('results');
+
+	function albumDisplay() {
+
+		var albumField = document.getElementById('albums');
+		var s = albumField.selectedIndex;
+		var album = albumField.options[s].value;
+		console.log(album);
+
+	};
+
+	results.innerHTML = '<p>Poop!</p>';
+
+	var searchButton = document.getElementById('searchButton');
+
+	searchButton.addEventListener('click', albumDisplay);
+
 
 });
