@@ -122,9 +122,29 @@ var albumsNeeded = [
     }
   ];
 
-
 window.addEventListener('load', function() {
-	
-	console.log("The window has loaded!");
+    
+    var results = document.getElementById('results');
+
+    function albumDisplay() {
+
+        var albumField = document.getElementById('albums');
+        var s = albumField.selectedIndex;
+        var album = albumField.options[s].value;
+        
+        var resultsHTML = '';
+        var albumsLength = albumsNeeded.length;
+
+        if (album != 0) {
+            resultsHTML += '<img src="' + albumsNeeded[s - 1].albumCover + '">';
+        };
+
+        results.innerHTML = resultsHTML;
+
+    };
+
+    var searchButton = document.getElementById('searchButton');
+
+    searchButton.addEventListener('click', albumDisplay);
 
 });
