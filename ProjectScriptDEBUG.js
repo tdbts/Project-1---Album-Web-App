@@ -131,15 +131,20 @@ window.addEventListener('load', function() {
 		var albumField = document.getElementById('albums');
 		var s = albumField.selectedIndex;
 		var album = albumField.options[s].value;
-		console.log(album);
+		
+		var resultsHTML = '';
+		var albumsLength = albumsNeeded.length;
+
+		if (album != 0) {
+			resultsHTML += '<img src="' + albumsNeeded[s - 1].albumCover + '">';
+		};
+
+		results.innerHTML = resultsHTML;
 
 	};
-
-	results.innerHTML = '<p>Poop!</p>';
 
 	var searchButton = document.getElementById('searchButton');
 
 	searchButton.addEventListener('click', albumDisplay);
-
 
 });
