@@ -4,3 +4,10 @@
 	font-family: "Courier New", "Comic Sans MS", Georgia;
 }
 
+#albumCover {
+	display: inline-block;
+	float: right;
+	margin-right: 300px;
+	position: relative;
+}
+

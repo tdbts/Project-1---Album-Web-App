@@ -136,7 +136,9 @@ window.addEventListener('load', function() {
         var albumsLength = albumsNeeded.length;
 
         if (album != 0) {
-            resultsHTML += '<img src="' + albumsNeeded[s - 1].albumCover + '">';
+            resultsHTML += '<img id="albumCover"\
+             src="' + albumsNeeded[s - 1].albumCover + '"\
+             height="500" width ="500">';
         };
 
         results.innerHTML = resultsHTML;
@@ -148,3 +150,4 @@ window.addEventListener('load', function() {
     searchButton.addEventListener('click', albumDisplay);
 
 });
+
