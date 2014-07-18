@@ -123,28 +123,28 @@ var albumsNeeded = [
   ];
 
 window.addEventListener('load', function() {
-    
-    var results = document.getElementById('results');
+	
+	var results = document.getElementById('results');
 
-    function albumDisplay() {
+	function albumDisplay() {
 
-        var albumField = document.getElementById('albums');
-        var s = albumField.selectedIndex;
-        var album = albumField.options[s].value;
-        
-        var resultsHTML = '';
-        var albumsLength = albumsNeeded.length;
+		var albumField = document.getElementById('albums');
+		var s = albumField.selectedIndex;
+		var album = albumField.options[s].value;
+		
+		var resultsHTML = '';
+		var albumsLength = albumsNeeded.length;
 
-        if (album != 0) {
-            resultsHTML += '<img src="' + albumsNeeded[s - 1].albumCover + '">';
-        };
+		if (album != 0) {
+			resultsHTML += '<img src="' + albumsNeeded[s - 1].albumCover + '">';
+		};
 
-        results.innerHTML = resultsHTML;
+		results.innerHTML = resultsHTML;
 
-    };
+	};
 
-    var searchButton = document.getElementById('searchButton');
+	var searchButton = document.getElementById('searchButton');
 
-    searchButton.addEventListener('click', albumDisplay);
+	searchButton.addEventListener('click', albumDisplay);
 
 });
