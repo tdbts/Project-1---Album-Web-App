@@ -26,7 +26,7 @@ var albumsNeeded = [
     },
   {
     title: "Exit 263",
-    artist: "Chambelain",
+    artist: "Chamberlain",
     year: "2000",
     genre: "Rock",
     life_Detail: "Chilling with Kaytee Sue and Mrs. Foster; Kaytee\'s Favorite",
