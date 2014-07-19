@@ -137,8 +137,7 @@ window.addEventListener('load', function() {
 
         if (album != 0) {
             resultsHTML += '<img id="albumCover"\
-             src="' + albumsNeeded[s - 1].albumCover + '"\
-             height="500" width ="500">';
+             src="' + albumsNeeded[s - 1].albumCover + '">';
         };
 
         results.innerHTML = resultsHTML;

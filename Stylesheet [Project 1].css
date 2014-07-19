@@ -1,3 +1,7 @@
+body {
+	background-color: #848484;
+}
+
 #header {
 	text-align: center;
 	background-color: #FAD180;
@@ -7,11 +11,21 @@
 #albumCover {
 	display: inline-block;
 	float: right;
+	margin-top: 25px;
 	margin-right: 900px;
-	position: relative;
+	position: absolute;
+	height: 500px;
+	width: 500px;
 }
 
 #results {
 	display: inline-block;
-	position: relative;
+	float: right;
+	margin-left: 50px;
+	position: absolute;
+}
+
+#albumInfo {
+	margin-top: 125px;
+	margin-left: 225px;
 }
