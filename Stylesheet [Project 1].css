@@ -7,7 +7,11 @@
 #albumCover {
 	display: inline-block;
 	float: right;
-	margin-right: 300px;
+	margin-right: 900px;
 	position: relative;
 }
 
+#results {
+	display: inline-block;
+	position: relative;
+}
