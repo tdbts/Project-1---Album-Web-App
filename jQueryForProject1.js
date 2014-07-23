@@ -31,7 +31,7 @@ $(document).ready(function() {
 
                 $("#lyricFooter").html('<p id="sampleLyric"></p>');
                 $("#sampleLyric").hide();
-                $("#sampleLyric").html(selectedAlbum.Lyric + "...");
+                $("#sampleLyric").html("<em>" + selectedAlbum.Lyric + "...</em>");
                 $("#sampleLyric").delay(800).fadeIn(750);
 
     		$("#albumInfo").fadeIn(500);
