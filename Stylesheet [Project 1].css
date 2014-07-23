@@ -36,3 +36,19 @@ body {
 	padding-right: 100px;
 	clear: both;
 }
+
+#lyricFooter {
+	height: 30px;
+	text-align: center;
+	background-color: #4f4f4f;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	position: fixed;
+	color: #FAD180;
+	letter-spacing: 3px;	
+}
+
+#sampleLyric {
+	margin-top: 3px;
+}

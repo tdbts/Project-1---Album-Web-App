@@ -1,14 +1,17 @@
 $(document).ready(function() {
 
     $("#header").hide();
+    $("#lyricFooter").hide();
     $("#header").fadeIn(1000);
+    $("#lyricFooter").fadeIn(700);
 
     $("#albumInfo").hide();
 
     $("#searchButton").click(function() {
-		
-		$("#albumInfo").hide();    	
-    	$("#results").hide();
+        
+        $("#sampleLyric").hide();
+        $("#albumInfo").hide();     
+        $("#results").hide();
     	$("#results").css("margin-Left", "50px");
     	$("#results").fadeIn(600).animate({marginLeft: "700px"}, 250, function() {
 
@@ -25,6 +28,11 @@ $(document).ready(function() {
                 $("#year").html(selectedAlbum.Year);
                 $("#genre").html(selectedAlbum.Genre);
                 $("#lifeDetail").html(selectedAlbum.Life_Detail);
+
+                $("#lyricFooter").html('<p id="sampleLyric"></p>');
+                $("#sampleLyric").hide();
+                $("#sampleLyric").html(selectedAlbum.Lyric + "...");
+                $("#sampleLyric").delay(800).fadeIn(750);
 
     		$("#albumInfo").fadeIn(500);
 
