@@ -144,9 +144,25 @@ window.addEventListener('load', function() {
 
     };
 
+    function randomAlbum() {
+        var randomNumber = Math.random();
+        var randomSelection = Math.floor((randomNumber * 15) + 1);
+        var randomNumberStorage = document.getElementById('randomNumberStorage');
+
+        var resultsHTML = '';
+
+        resultsHTML += '<img id="albumCover"\
+         src="' + albumsNeeded[randomSelection].albumCover + '">';
+
+        randomNumberStorage.innerHTML = randomSelection;
+        results.innerHTML = resultsHTML;
+    };
+
     var searchButton = document.getElementById('searchButton');
+    var randomButton = document.getElementById('randomButton');
 
     searchButton.addEventListener('click', albumDisplay);
+    randomButton.addEventListener('click', randomAlbum);
 
 });
 
