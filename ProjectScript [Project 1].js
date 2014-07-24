@@ -133,7 +133,6 @@ window.addEventListener('load', function() {
         var album = albumField.options[s].value;
         
         var resultsHTML = '';
-        var albumsLength = albumsNeeded.length;
 
         if (album != 0) {
             resultsHTML += '<img id="albumCover"\
@@ -145,6 +144,7 @@ window.addEventListener('load', function() {
     };
 
     function randomAlbum() {
+        
         var randomNumber = Math.random();
         var randomSelection = Math.floor((randomNumber * 15) + 1);
         var randomNumberStorage = document.getElementById('randomNumberStorage');
