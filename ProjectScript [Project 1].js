@@ -148,13 +148,14 @@ window.addEventListener('load', function() {
         var randomNumber = Math.random();
         var randomSelection = Math.floor((randomNumber * 15) + 1);
         var randomNumberStorage = document.getElementById('randomNumberStorage');
+        console.log("randomSelection = " + randomSelection);
 
         var resultsHTML = '';
 
         resultsHTML += '<img id="albumCover"\
-         src="' + albumsNeeded[randomSelection].albumCover + '">';
+         src="' + albumsNeeded[randomSelection -1].albumCover + '">';
 
-        randomNumberStorage.innerHTML = randomSelection;
+        randomNumberStorage.innerHTML = randomSelection - 1;
         results.innerHTML = resultsHTML;
     };
 

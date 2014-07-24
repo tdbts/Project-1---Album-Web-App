@@ -56,6 +56,7 @@ $(document).ready(function() {
                 var albumField = document.getElementById('albums');
                 var s = $("#randomNumberStorage").text();
                 var album = albumField.options[s].value;
+                console.log("s = " + s);
                 console.log(album);
 
                 var selectedAlbum = albumsJSON.Albums_Needed[album];
