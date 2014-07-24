@@ -148,7 +148,6 @@ window.addEventListener('load', function() {
         var randomNumber = Math.random();
         var randomSelection = Math.floor((randomNumber * 15) + 1);
         var randomNumberStorage = document.getElementById('randomNumberStorage');
-        console.log("randomSelection = " + randomSelection);
 
         var resultsHTML = '';
 
