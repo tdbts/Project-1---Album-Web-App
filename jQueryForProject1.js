@@ -1,18 +1,29 @@
 $(document).ready(function() {
 
-    $("#header").hide();
-    $("#lyricFooter").hide();
-    $("#header").fadeIn(1000);
-    $("#lyricFooter").fadeIn(700);
+    $("#header").hide().fadeIn(1000);
+    $("#lyricFooter").hide().fadeIn(700);
 
-    $("#albumInfo").hide();
     $("#randomNumberStorage").hide();
+
+    var needJSON = function placeJSON(userSelection) {
+        $("#title").html(userSelection.Title);
+        $("#artist").html(userSelection.Artist);
+        $("#year").html(userSelection.Year);
+        $("#genre").html(userSelection.Genre);
+        $("#lifeDetail").html(userSelection.Life_Detail);
+
+        $("#lyricFooter").html('<p id="sampleLyric"></p>');
+        $("#sampleLyric").hide();
+        $("#sampleLyric").html("<em>" + userSelection.Lyric + "...</em>");
+        $("#sampleLyric").delay(800).fadeIn(750);
+
+        $("#albumInfo").fadeIn(500);
+    };
 
     $("#searchButton").click(function() {
         
-        $("#sampleLyric").hide();
-        $("#albumInfo").hide();     
-        $("#results").hide();
+        $("#sampleLyric, #albumInfo, #results").hide();
+        
     	$("#results").css("margin-Left", "50px");
     	$("#results").fadeIn(600).animate({marginLeft: "700px"}, 250, function() {
 
@@ -20,22 +31,10 @@ $(document).ready(function() {
                 var albumField = document.getElementById('albums');
                 var s = albumField.selectedIndex;
                 var album = albumField.options[s].value;
-                console.log(album);
-
+                
                 var selectedAlbum = albumsJSON.Albums_Needed[album - 1];
 
-                $("#title").html(selectedAlbum.Title);
-                $("#artist").html(selectedAlbum.Artist);
-                $("#year").html(selectedAlbum.Year);
-                $("#genre").html(selectedAlbum.Genre);
-                $("#lifeDetail").html(selectedAlbum.Life_Detail);
-
-                $("#lyricFooter").html('<p id="sampleLyric"></p>');
-                $("#sampleLyric").hide();
-                $("#sampleLyric").html("<em>" + selectedAlbum.Lyric + "...</em>");
-                $("#sampleLyric").delay(800).fadeIn(750);
-
-    		$("#albumInfo").fadeIn(500);
+                needJSON(selectedAlbum);
 
             });
     		
@@ -46,9 +45,8 @@ $(document).ready(function() {
 
     $("#randomButton").click(function() {
         
-        $("#sampleLyric").hide();
-        $("#albumInfo").hide();     
-        $("#results").hide();
+        $("#sampleLyric, #albumInfo, #results").hide();
+
         $("#results").css("margin-Left", "50px");
         $("#results").fadeIn(600).animate({marginLeft: "700px"}, 250, function() {
 
@@ -59,23 +57,11 @@ $(document).ready(function() {
 
                 var selectedAlbum = albumsJSON.Albums_Needed[album];
 
-                $("#title").html(selectedAlbum.Title);
-                $("#artist").html(selectedAlbum.Artist);
-                $("#year").html(selectedAlbum.Year);
-                $("#genre").html(selectedAlbum.Genre);
-                $("#lifeDetail").html(selectedAlbum.Life_Detail);
-
-                $("#lyricFooter").html('<p id="sampleLyric"></p>');
-                $("#sampleLyric").hide();
-                $("#sampleLyric").html("<em>" + selectedAlbum.Lyric + "...</em>");
-                $("#sampleLyric").delay(800).fadeIn(750);
-
-            $("#albumInfo").fadeIn(500);
+                needJSON(selectedAlbum);
 
             });
             
         });
-
             
     });    
 	
