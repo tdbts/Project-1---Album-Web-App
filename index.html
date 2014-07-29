@@ -1,1 +1,63 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta lang="en">
+		<meta http-equiv="Content-Script-Type" content="text/html; charset="utf-8">
+		<meta name="keywords" content="web app, html, css, javascript">
+		<meta name="description" content="simple web app about music">
+		<title>Albums I Need to Own</title>
+		<link href="Stylesheet [Project 1].css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="header"><h1>Albums I Really, Really Should Own Before I Die</h1></div> 
+		<div id="main">
+			<div class="row">
+				<label>Select One:</label>
+				<select id="albums">
+					<option value="0">***Albums***</option>
+					<option value="1">Clarity</option>
+					<option value="2">Fate's Got a Driver</option>
+					<option value="3">The Moon My Saddle</option>
+					<option value="4">Exit 263</option>
+					<option value="5">Man on the Moon: Part I</option>
+					<option value="6">Reasonable Doubt</option>
+					<option value="7">Illmatic</option>
+					<option value="8">The Dark Side of the Moon</option>
+					<option value="9">The Bake Sale</option>
+					<option value="10">Bleed American</option>
+					<option value="11">Today's Empires, Tomorrow's Ashes</option>
+					<option value="12">The Best of the Guess Who</option>
+					<option value="13">Emotion is Dead</option>
+					<option value="14">De-loused in the Comatorium</option>
+					<option value="15">Frances the Mute</option>
+				</select>
+			</div>
+			<div>
+				<button id="searchButton">Search</button>
+				<button id="randomButton">Random Album</button>
+			</div>
+			<div id="results">
+				
+			</div>
+			<div id="albumInfo">
+				<h1 id="title"></h1>
+				<h4 id="artist"></h4>
+				<p id="year"></p>
+				<p id="genre"></p>
+				<p id="lifeDetail"></p>
+			</div>
+		</div>
+		<div id="lyricFooter">
+		</div>
+		<div id="randomNumberStorage">
+		</div>
+
+		<script src="jquery-1.11.1.min.js"></script>
+		<script src="ProjectScript [Project 1].js"></script>
+		<script src="jQueryForProject1.js"></script>
+		 
+	</body>
+
+</html>
